@@ -6,10 +6,15 @@ resource "yandex_compute_instance" "vm-manager" {
   count    = var.managers
   name     = "ci-sockshop-docker-swarm-manager-${count.index}"
   hostname = "manager-${count.index}"
+  platform_id = "standard-v3"
 
   resources {
     cores  = 2
     memory = 2
+  }
+  
+  scheduling_policy {
+    preemptible = true
   }
 
   boot_disk {
