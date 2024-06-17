@@ -38,10 +38,15 @@ resource "yandex_compute_instance" "vm-worker" {
   count    = var.workers
   name     = "ci-sockshop-docker-swarm-worker-${count.index}"
   hostname = "worker-${count.index}"
+  platform_id = "standard-v3"
 
   resources {
     cores  = 2
     memory = 2
+  }
+
+  scheduling_policy {
+    preemptible = true
   }
 
   boot_disk {
