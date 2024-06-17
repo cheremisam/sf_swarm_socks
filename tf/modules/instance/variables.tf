@@ -30,7 +30,7 @@ variable "ssh_credentials" {
   })
   default     = {
     user        = "ubuntu"
-    private_key = "~/.ssh/id_rsa"
-    pub_key     = "~/.ssh/id_rsa.pub"
+    private_key = "~/.ssh/artemYandexCloud"
+    pub_key     = "~/.ssh/artemYandexCloud.pub"
   }
 }
