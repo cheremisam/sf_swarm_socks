@@ -8,9 +8,9 @@ terraform {
 }
 provider "yandex" {
   service_account_key_file = file("authorized_key.json")
-  cloud_id  = "b1gplktasqvig8ni6vo5"
-  folder_id = "b1gqftj4l2lugo15sbi2"
-  zone      = "ru-central1-a"
+  cloud_id                 = "b1gplktasqvig8ni6vo5"
+  folder_id                = "b1gqftj4l2lugo15sbi2"
+  zone                     = "ru-central1-a"
 }
 
 resource "yandex_vpc_network" "network" {
