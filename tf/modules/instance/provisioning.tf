@@ -57,7 +57,7 @@ resource "null_resource" "docker-swarm-worker" {
       "curl -fsSL https://get.docker.com | sh",
       "sudo usermod -aG docker $USER",
       "chmod +x join.sh",
-      "join.sh"
+      "~/join.sh"
     ]
   }
 }
