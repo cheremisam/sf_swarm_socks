@@ -49,7 +49,7 @@ resource "null_resource" "docker-swarm-worker" {
 
   provisioner "file" {
     source      = "join.sh"
-    destination = "~/join.sh"
+    destination = "join.sh"
   }
 
   provisioner "remote-exec" {
