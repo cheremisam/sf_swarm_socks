@@ -9,7 +9,7 @@ resource "null_resource" "docker-swarm-manager" {
 
   provisioner "file" {
     source      = "../docker-compose-v3.yml"
-    destination = "~/docker-compose.yml"
+    destination = "docker-compose.yml"
   }
 
   provisioner "remote-exec" {
@@ -56,8 +56,8 @@ resource "null_resource" "docker-swarm-worker" {
     inline = [
       "curl -fsSL https://get.docker.com | sh",
       "sudo usermod -aG docker $USER",
-      "chmod +x ~/join.sh",
-      "~/join.sh"
+      "chmod +x join.sh",
+      "join.sh"
     ]
   }
 }
