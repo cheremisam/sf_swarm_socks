@@ -8,7 +8,7 @@ resource "null_resource" "docker-swarm-manager" {
   }
 
   provisioner "file" {
-    source      = "../../../docker-compose/docker-compose-v3.yml"
+    source      = "../docker-compose-v3.yml"
     destination = "~/docker-compose.yml"
   }
 
